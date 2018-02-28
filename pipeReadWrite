@@ -1,0 +1,5 @@
+var fs = require('fs');
+var rs = fs.createReadStream('mynotes.txt');
+var ws = fs.createWriteStream('out.txt');
+// pipe read data stream into write file stream
+rs.pipe(ws);
